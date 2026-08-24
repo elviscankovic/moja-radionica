@@ -1,5 +1,13 @@
-export const RELEASE_API = 'https://api.github.com/repos/elviscankovic/moja-potrosnja-struje/releases/latest';
-export const RELEASE_FALLBACK = 'https://github.com/elviscankovic/moja-potrosnja-struje/releases/latest';
+export function releaseUrls(repository) {
+  if (!/^[\w.-]+\/[\w.-]+$/.test(repository || '')) {
+    throw new Error('Naziv GitHub repozitorija nije valjan.');
+  }
+
+  return {
+    api: `https://api.github.com/repos/${repository}/releases/latest`,
+    fallback: `https://github.com/${repository}/releases/latest`
+  };
+}
 
 export function latestApkFromRelease(release) {
   if (!release || release.draft || release.prerelease) return null;

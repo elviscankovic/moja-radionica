@@ -1,20 +1,21 @@
 import {
-  RELEASE_API,
-  RELEASE_FALLBACK,
+  releaseUrls,
   latestApkFromRelease,
   formatFileSize,
   formatCroatianDate
 } from './release.js';
 
-const downloadButton = document.querySelector('#downloadButton');
-const downloadLabel = document.querySelector('#downloadLabel');
-const releaseMeta = document.querySelector('#releaseMeta');
-
 document.querySelector('#currentYear').textContent = new Date().getFullYear();
 
-async function loadLatestRelease() {
+async function loadLatestRelease(panel) {
+  const repository = panel.dataset.repository;
+  const downloadButton = panel.querySelector('[data-download-button]');
+  const downloadLabel = panel.querySelector('[data-download-label]');
+  const releaseMeta = panel.querySelector('[data-release-meta]');
+  const { api, fallback } = releaseUrls(repository);
+
   try {
-    const response = await fetch(RELEASE_API, {
+    const response = await fetch(api, {
       headers: { Accept: 'application/vnd.github+json' }
     });
 
@@ -29,10 +30,10 @@ async function loadLatestRelease() {
     const details = [formatFileSize(apk.size), formatCroatianDate(apk.publishedAt)].filter(Boolean);
     releaseMeta.textContent = details.length ? `Stabilno Android izdanje · ${details.join(' · ')}` : 'Stabilno Android izdanje · APK';
   } catch (error) {
-    downloadButton.href = RELEASE_FALLBACK;
+    downloadButton.href = fallback;
     downloadLabel.textContent = 'Otvori najnovije izdanje';
     releaseMeta.textContent = 'GitHub će prikazati aktualnu stabilnu verziju.';
   }
 }
 
-loadLatestRelease();
+document.querySelectorAll('.download-panel[data-repository]').forEach(loadLatestRelease);
