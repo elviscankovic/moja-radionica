@@ -1,6 +1,6 @@
 # Moja radionica
 
-Jednostavna javna stranica za tri Čakijeva projekta:
+Jednostavna javna stranica za tri mala projekta:
 
 - Moja potrošnja struje
 - Zlatne ruke
