@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Moja radionica — male, praktične aplikacije koje razvija Čaki.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Moja radionica — Čakijeve aplikacije</title>
+  <link rel="preconnect" href="https://api.github.com">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#aplikacije">Preskoči na aplikacije</a>
+
+  <header class="site-header">
+    <a class="brand" href="#vrh" aria-label="Moja radionica — početak">
+      <span class="brand-mark" aria-hidden="true">MR</span>
+      <span>Moja radionica</span>
+    </a>
+    <a class="header-contact" href="mailto:elvis.cankovic@gmail.com?subject=Upit%20s%20web-stranice%20Moja%20radionica">Kontakt</a>
+  </header>
+
+  <main id="vrh">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">MALI ALATI · STVARNE POTREBE</p>
+      <h1 id="hero-title">Jednostavne aplikacije.<br><span>Bez nepotrebnih komplikacija.</span></h1>
+      <p class="hero-copy">Ovdje su mali projekti koje razvijam za svakodnevnu upotrebu. Jasni su, praktični i napravljeni da rade svoj posao.</p>
+      <a class="hero-link" href="#aplikacije">Pogledaj aplikacije <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section id="aplikacije" class="apps-section" aria-labelledby="apps-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">IZ RADIONICE</p>
+          <h2 id="apps-title">Tri projekta, jedan cilj</h2>
+        </div>
+        <p>Tehnologija treba olakšati posao, a ne tražiti upute od 200 stranica.</p>
+      </div>
+
+      <div class="app-grid">
+        <article class="app-card app-card--ready">
+          <div class="card-topline">
+            <span class="app-icon app-icon--blue" aria-hidden="true">⚡</span>
+            <span class="status status--ready"><span aria-hidden="true"></span> Dostupno</span>
+          </div>
+          <div class="card-copy">
+            <p class="card-number">01</p>
+            <h3>Moja potrošnja struje</h3>
+            <p>Android aplikacija za praćenje očitanja, potrošnje i procijenjenog troška električne energije — za jedno ili više brojila.</p>
+            <ul class="feature-list" aria-label="Glavne mogućnosti">
+              <li>Jednotarifna i dvotarifna brojila</li>
+              <li>Više mjernih mjesta</li>
+              <li>Lokalni podaci i JSON sigurnosna kopija</li>
+            </ul>
+          </div>
+          <div class="download-panel" id="downloadPanel" aria-live="polite">
+            <a class="button button--primary" id="downloadButton"
+               href="https://github.com/elviscankovic/moja-potrosnja-struje/releases/latest"
+               rel="noopener">
+              <span id="downloadLabel">Tražim najnoviju verziju…</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <p class="release-meta" id="releaseMeta">Stabilno Android izdanje · APK</p>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="card-topline">
+            <span class="app-icon app-icon--amber" aria-hidden="true">🛠</span>
+            <span class="status status--building">U razvoju</span>
+          </div>
+          <div class="card-copy">
+            <p class="card-number">02</p>
+            <h3>Zlatne ruke</h3>
+            <p>Web i buduća Android aplikacija koja povezuje umirovljenike koji žele raditi s poslodavcima kojima trebaju iskustvo, znanje i pouzdanost.</p>
+            <ul class="feature-list" aria-label="Planirane mogućnosti">
+              <li>Oglasi i prijave za posao</li>
+              <li>Profili umirovljenika i poslodavaca</li>
+              <li>Razgovori i obavijesti</li>
+            </ul>
+          </div>
+          <div class="coming-soon" role="note">
+            <strong>Još nije za javnu uporabu</strong>
+            <span>Informacije o dostupnosti objavit ćemo ovdje.</span>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="card-topline">
+            <span class="app-icon app-icon--violet" aria-hidden="true">⏱</span>
+            <span class="status status--building">U razvoju</span>
+          </div>
+          <div class="card-copy">
+            <p class="card-number">03</p>
+            <h3>Radno vrijeme</h3>
+            <p>Jednostavna osobna evidencija dolaska, odlaska i prekovremenih sati, prilagođena radu na nepuno radno vrijeme.</p>
+            <ul class="feature-list" aria-label="Glavne mogućnosti">
+              <li>Dnevni unos dolaska i odlaska</li>
+              <li>Odvojeni prikaz redovnih i prekovremenih sati</li>
+              <li>Mjesečni pregled i izvještaj</li>
+            </ul>
+          </div>
+          <div class="coming-soon" role="note">
+            <strong>Još nije dostupno za preuzimanje</strong>
+            <span>Objavit ćemo ga tek kada bude potpuno spreman.</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow">KONTAKT</p>
+        <h2 id="contact-title">Prijedlog, pitanje ili prijava problema?</h2>
+        <p>Javi se. Povratna informacija često je najbolji alat u radionici.</p>
+      </div>
+      <a class="button button--light" href="mailto:elvis.cankovic@gmail.com?subject=Upit%20s%20web-stranice%20Moja%20radionica">
+        Piši Čakiju <span aria-hidden="true">→</span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="currentYear"></span> Čaki · Moja radionica</p>
+    <p>Male aplikacije, napravljene s razlogom.</p>
+  </footer>
+</body>
+</html>
