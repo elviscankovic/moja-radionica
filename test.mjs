@@ -27,12 +27,16 @@ assert.deepEqual(releaseUrls('elviscankovic/moje-radno-vrijeme'), {
 assert.throws(() => releaseUrls('neispravno'), /nije valjan/);
 
 const html = await readFile(new URL('./index.html', import.meta.url), 'utf8');
-assert.equal((html.match(/<article class="app-card/g) || []).length, 3);
+assert.equal((html.match(/<article class="app-card/g) || []).length, 4);
 assert.match(html, /elvis\.cankovic@gmail\.com/);
 assert.equal((html.match(/data-download-button/g) || []).length, 2);
 assert.match(html, /data-repository="elviscankovic\/moja-potrosnja-struje"/);
 assert.match(html, /data-repository="elviscankovic\/moje-radno-vrijeme"/);
 assert.match(html, /Zlatne ruke/);
+assert.doesNotMatch(html, /Otvori Zlatne ruke/);
+assert.doesNotMatch(html, /https:\/\/zlatne-ruke\.com\.hr\//);
+assert.match(html, /Kufer računa/);
+assert.match(html, /Još nije za javnu uporabu/);
 assert.match(html, /Moje radno vrijeme/);
 
 console.log('Test je prošao: sadržaj stranice i automatski najnoviji stabilni APK rade.');
