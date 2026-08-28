@@ -2,7 +2,7 @@
   color-scheme: light;
   --ink: #101828; --muted: #5d6878; --line: #dce2e9; --paper: #f4f6f8; --white: #ffffff;
   --navy: #0b1220; --blue: #2563eb; --blue-dark: #1d4ed8; --blue-pale: #eaf1ff;
-  --green: #08775a; --green-pale: #e7f7f1; --amber-pale: #fff2d6; --violet-pale: #f1eafe;
+  --green: #08775a; --green-pale: #e7f7f1; --amber-pale: #fff2d6; --cyan-pale: #e5f7fa; --violet-pale: #f1eafe;
   --radius-lg: 28px; --radius-md: 18px; --shadow: 0 22px 60px rgba(20,32,54,.10);
 }
 * { box-sizing: border-box; }
@@ -29,12 +29,15 @@ a { color:inherit; }
 .section-heading { display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:end; margin-bottom:32px; }
 .section-heading h2,.contact-section h2 { margin:0; font-size:clamp(2rem,4vw,3.15rem); line-height:1.05; letter-spacing:-.045em; }
 .section-heading>p { max-width:430px; margin:0 0 3px auto; color:var(--muted); }
-.app-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.app-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
 .app-card { display:flex; min-width:0; min-height:610px; flex-direction:column; padding:25px; border:1px solid var(--line); border-radius:var(--radius-md); background:rgba(255,255,255,.76); }
 .app-card--ready { border-color:#b9caef; background:var(--white); box-shadow:0 18px 44px rgba(38,75,145,.09); }
 .card-topline { display:flex; align-items:center; justify-content:space-between; gap:12px; }
 .app-icon { display:grid; width:52px; height:52px; place-items:center; border-radius:16px; font-size:1.45rem; }
-.app-icon--blue { background:var(--blue-pale); } .app-icon--amber { background:var(--amber-pale); } .app-icon--violet { background:var(--violet-pale); }
+.app-icon--blue { background:var(--blue-pale); }
+.app-icon--amber { background:var(--amber-pale); }
+.app-icon--cyan { background:var(--cyan-pale); }
+.app-icon--violet { background:var(--violet-pale); }
 .status { display:inline-flex; align-items:center; gap:7px; padding:7px 10px; border-radius:999px; background:#edf0f4; color:#596577; font-size:.72rem; font-weight:820; letter-spacing:.04em; text-transform:uppercase; }
 .status--ready { background:var(--green-pale); color:var(--green); }
 .status--ready span { width:7px; height:7px; border-radius:50%; background:#0c9b73; }
