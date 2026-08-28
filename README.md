@@ -1,9 +1,10 @@
 # Moja radionica
 
-Jednostavna javna stranica za tri mala projekta:
+Jednostavna javna stranica za četiri mala projekta:
 
 - Moja potrošnja struje
 - Zlatne ruke
+- Kufer računa
 - Moje radno vrijeme
 
 Stranica je statična i namijenjena GitHub Pages hostingu. Najnoviji stabilni APK-ovi aplikacija **Moja potrošnja struje** i **Moje radno vrijeme** dohvaćaju se pri svakom otvaranju putem javnog GitHub Releases API-ja. Ako API trenutačno nije dostupan, gumb vodi na GitHubovu stranicu najnovijeg izdanja.
